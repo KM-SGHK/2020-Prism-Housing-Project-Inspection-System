@@ -1,0 +1,188 @@
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+        integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="./defectDistribution.css" />
+    <!-- <link rel="stylesheet" href="/protected/index.css" /> -->
+    
+
+</head>
+
+
+<body style="background-color: white;">
+
+    <!--nav bar-->
+    <div class="navbar-buffer-underneath"></div>
+    <div class="pos-f-t">
+        <nav id="navigation-bar" class="navbar fixed-top navbar-dark">
+            <a class="nav-item nav-link" href="./developer_index.html">
+              <img src="./prism_logo.png" class="img-fluid">
+            </a>
+           
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent"
+                aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+    
+        <div class="collapse" id="navbarToggleExternalContent">
+            <div id="navbar-dropdown-list" class="p-4">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-6">
+                            <a class="nav-item nav-link active" href="./developer_index.html">管理員專頁</a>
+                            &ensp;&emsp;<span class="text-muted">Account Management</span>
+                            <a class="nav-item nav-link" href="./developerReport1.html">已檢驗單位問題概覽</a>
+                            &ensp;&emsp;<span class="text-muted">Defect Urgency Summary</span><br>
+                            <a class="nav-item nav-link" href="./developerReport2.html">已檢驗單位類型</a>
+                            &ensp;&emsp;<span class="text-muted">Defect By Flat Type</span><br>
+                            <a class="nav-item nav-link" href="./developerReport2.html">各類已檢驗單位問題分佈</a>
+                        </div>
+                        <div class="col-6">
+                            <a class="nav-item nav-link" href="./developerReport3.html">外判建築商表現</a>
+                            &ensp;&emsp;<span class="text-muted">Sub-contractor Performance</span>
+                            <a class="nav-item nav-link" href="./developerReport4.html">驗樓進度</a>
+                            &ensp;&emsp;<span class="text-muted">Inspection Progress</span>
+                            <a class="nav-item nav-link" href="./print-word-report.html">驗樓報告</a>
+                            &ensp;&emsp;<span class="text-muted">Inspection Reports</span>
+                            <a class="nav-item nav-link" href="./defectDistribution.html">單位瑕疵分佈</a>
+                            &ensp;&emsp;<span class="text-muted">Defects Distribution By Flat</span>
+                            <br><br>
+                            <a class="nav-item nav-link logout" href="/logout">[ 登出 ]</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="search-title">
+        <h3>單位瑕疵分佈</h3>
+    </div>
+    <div class="search-flat-bar">
+        <form action="/flats" method='GET' enctype="multipart/form-data" id="search-flat-form">
+          <div class="flat-selection">
+            <div class="form-row">
+              <div class="form-group row">
+                <label for="tower" class="col-form-label">
+                  座號:</label>
+                <div class="input-width">
+                  <input type="text" class="form-control" id="tower" name="tower" />
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="floor" class="col-form-label">
+                  樓層:</label>
+                <div class="input-width">
+                  <input type="text" class="form-control" id="floor" name="floor" />
+                </div>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group row">
+                <label for="room" class="col-form-label">
+                  單位:</label>
+                  <div class="input-width">
+                  <input type="text" class="form-control" id="room" name="room" />
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="type" class="col-form-label">
+                  房型:</label>
+                <div class="input-width">
+                  <input type="text" class="form-control" id="type" name="type" />
+                </div>
+              </div>
+            </div>
+    
+            <div class="flat-search-button">
+              <!-- <a class="" href="#search-table-id"></a> -->
+              <button type="submit" class="btn btn-dark" id="search-flat">篩選</button>
+              <!-- </a> -->
+            </div>
+          </form>
+      </div>
+
+      <div class="container-fluid" id="searchResultTable">
+        <table class="table table-striped table-dark searchFlatTable" style="display: none" >
+          <thead class="searchFlatThead">
+            <tr class="searchFlatTr">
+              <th class="searchFlatTh" scope="col">單位</th>
+              <th class="searchFlatTh" scope="col">房型</th>
+              <th class="searchFlatTh" scope="col">呎數</th>
+              <th class="searchFlatTh" scope="col"></th>
+            </tr>
+          </thead>
+          <tbody id="flatResultTable">
+            <tr class="flat-row searchFlatTr" style="display: none" >
+                <td class="searchFlatTd"></td>
+                <td class="searchFlatTd"></td>
+                <td class="searchFlatTd"></td>
+                <td>
+                <button type="button" class="btn flatSelectButton"}>檢查</button>
+                </td>
+                </tr>
+          </tbody>
+        </table>
+      </div>
+
+
+      <div id="floorPlanContainer">
+        <div id="myModal" class="modal">
+
+            <!-- Modal content -->
+              <div class="modal-content">
+                <span class="close" onclick="setModalOff()">&times; </span>
+                <!-- <span id="zoomValue">1</span> -->
+                <div id="scrollMsgContainer">
+                <span id="scrollMsg">Scroll to zoom in and out</span>
+                </div>
+                <div id = "svgContainer" 
+                onwheel="mouseWheel(event)" onmousedown="mouseDown(event)" onmouseup="mouseUp(event)" onmousemove="mouseMove(event)" onmouseleave="mouseLeave(event)"
+                >
+                    <svg id="svgImage" width="80%" height="80%" viewBox="0,0,750,750">
+                    
+                    <image height="750" width="750"/>
+                    <g id="spacesGroup">
+                    <circle cx="350" cy="350" r="10" stroke="green" stroke-width="4" fill="yellow" />
+                    </g>
+
+                    <g id="defectsGroup">
+                    <circle cx="500" cy="500" r="10" stroke="black" stroke-width="4" fill="red" onclick="showDefectInfo(1)"/>
+                    </g>
+
+                    <g id="defectsDescription">
+                        <circle cx="500" cy="500" r="10" stroke="black" stroke-width="4" fill="red"/>
+                    </g>
+                </svg>
+            </div>
+          
+          </div>
+      </div>
+
+    
+
+
+
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <!-- Latest compiled and minified Popper: Use for pop up bubble -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <!-- Latest compiled and minified Bootstrap JavaScript -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
+        integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+        crossorigin="anonymous"></script>
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+        <script src="js/defectDistribution.js"></script>
+
+</body>
+
+</html>

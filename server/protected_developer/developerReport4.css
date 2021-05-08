@@ -1,0 +1,84 @@
+body{
+    background-color: white;
+    min-width: fit-content;
+    min-height: fit-content;
+}
+
+
+
+/* Nav Bar */
+nav#navigation-bar.navbar{
+    height: 12vh;
+    border-color: black !important;
+    border: 2px !important;
+}
+
+.navbar-buffer-underneath{
+    height: 12vh;
+    z-index: -1;
+    position: static;
+}
+
+.pos-f-t{
+    position: absolute;
+    top: 12vh;
+    width: 100vw;
+    z-index: 20;
+    border-color: black !important;
+    border: 2px !important;
+}
+
+.nav-item.nav-link{
+    color: #F8D807;
+    font-size: larger;
+    font-weight: 650;
+}
+    .nav-item.nav-link:hover{
+        color: rgb(22,151,143);
+        font-weight: 900;
+        text-shadow: #F8D807 0.5px 0.5px;
+    }
+
+#navbar-dropdown-list.p-4{
+    background-color: #333333 !important;
+    position: relative !important;
+    box-shadow: black 2px 1px 1px 2px;
+}
+.navbar{
+    background-color: #F8D807;
+}
+
+.fas.fa-bars{
+    padding: 13px;
+}
+
+.navbar>a>img{
+    max-height: 6vh;
+    margin-bottom: 4px;
+}
+.navbar>button.navbar-toggler{
+    border-color: black;
+    border-width: 2px;
+    padding: 8px 15px 8px 15px;
+    margin-right: 10px;
+    color: black;
+}
+    .nav-item.nav-link.active{
+        color: rgb(22,151,143);
+        font-weight: 900;
+    }
+
+
+/* Data Table */ 
+.devReport-container4 .table>tbody{
+    background-color: #999999 !important;
+}
+
+
+
+/* Charts */
+    #progress-chart-container{
+        display:flex;
+        justify-content: center;
+    }
+

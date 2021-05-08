@@ -1,0 +1,172 @@
+#header-top-zone {
+    background: #F8D807;
+    box-sizing: border-box;
+    position: sticky; 
+    top:0;
+    z-index: 2;
+}
+
+    .header-top-title {
+        text-align: center;
+        padding-top: 2%;
+        padding-bottom: 2%;
+        font-size: 1.9rem;
+        font-weight: 900;
+        margin-top: 8px;
+        color: #000044;
+    }
+
+    #click-back {
+        padding: 4% 0% 4% 0%;
+    }
+
+
+/* ----  below newly added by a perfectionist  ---- */
+
+    #header-top-zone #top-left-zone{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .btn-outline-dark{
+        border: 2px solid;
+        font-weight: 600; 
+    }
+
+
+html, body {
+    min-width: fit-content;
+    min-height: fit-content;
+}  
+
+.container-fluid {
+    width: 100%;
+    padding-right: 0px;
+    padding-left: 0px;
+    margin-right: 0px;
+    margin-left: 0px;
+}
+
+.building-bg-img {
+    background-image: url(carmel-bgimg.jpg);
+    width: 100%;
+    height: 450px;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+}
+
+.carmel-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: inherit;
+}
+
+.carmel-info{
+    width: 100%;
+    background-color:  rgba(255, 255, 255, 0.6);
+    position: relative;
+    color: #000044;
+}
+
+.carmel-info h1{
+    background-color: rgba(255, 255, 255, 0.6);
+}
+
+.carmel-info h5{
+    background-color: rgba(255, 255, 255, 0.6);
+}
+
+
+
+.row {
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+.flat-selection {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 100%;
+    background-color: #FBEB83;
+}
+.form-control {
+    display: block;
+    width: 100%;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #000044;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1.5px solid #000044;
+    border-radius: .5rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.form-group label{
+    font-weight: 900;
+    color: #000044;
+    padding-right: 10px;
+}
+
+.btn-dark {
+    color: #F8D807;
+    font-weight: 900;
+    background-color: #000044;
+    border-color: #000044;
+    width: 150px;
+    border-radius: 0.5rem;
+
+}
+
+.btn-primary{
+    color: #f8d807;
+    font-weight: 900;
+    background-color: #000044;
+    border-color: #000044;
+    border-radius: 0.5rem;
+}
+
+.form-row{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.searchFlatThead{
+    background-color: #000044;
+}
+
+.flat-search-button{
+    display: flex;
+    justify-content: center;
+}
+
+.flatSelectButton{
+    font-weight: 700;
+    background-color: #F8D807;
+    color: #000044;
+    border-color: #000044;
+    border-radius: 0.5rem;
+}
+
+
+@media 
+only screen and (max-width: 760px),
+(min-device-width: 768px) and (max-device-width: 1024px)  {
+    .building-bg-img {
+        height: 250px;
+    }
+
+    .carmel-info h1{
+        font-size: 1.7rem;
+    }
+    
+    .carmel-info h5{
+        font-size: 0.7rem;
+    }
+
+}

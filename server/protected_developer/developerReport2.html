@@ -1,0 +1,98 @@
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+        integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <link rel="stylesheet" href="./developerReport2.css" />
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.css"> -->
+    
+
+</head>
+
+
+<body>
+
+    <!--nav bar-->
+    <div class="navbar-buffer-underneath"></div>
+    <div class="pos-f-t">
+        <nav id="navigation-bar" class="navbar fixed-top navbar-dark">
+            <a class="nav-item nav-link" href="./developer_index.html"><img src="./prism_logo.png" class="img-fluid"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent"
+                aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+    
+        <div class="collapse" id="navbarToggleExternalContent">
+            <div id="navbar-dropdown-list" class="p-4">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-6">
+                            <a class="nav-item nav-link" href="./developer_index.html">管理員專頁</a>
+                            &ensp;&emsp;<span class="text-muted">Account Management</span>
+                            <a class="nav-item nav-link" href="./developerReport1.html">已檢驗單位問題概覽</a>
+                            &ensp;&emsp;<span class="text-muted">Defect Urgency Summary</span><br>
+                            <a class="nav-item nav-link active" href="./developerReport2.html">已檢驗單位類型</a>
+                            &ensp;&emsp;<span class="text-muted">Defect By Flat Type</span><br>
+                            <a class="nav-item nav-link" href="./developerReport2.html">各類已檢驗單位問題分佈</a>
+                        </div>
+                        <div class="col-6">
+                            <a class="nav-item nav-link" href="./developerReport3.html">外判建築商表現</a>
+                            &ensp;&emsp;<span class="text-muted">Sub-contractor Performance</span>
+                            <a class="nav-item nav-link" href="./developerReport4.html">驗樓進度</a>
+                            &ensp;&emsp;<span class="text-muted">Inspection Progress</span>
+                            <a class="nav-item nav-link" href="./print-word-report.html">驗樓報告</a>
+                            &ensp;&emsp;<span class="text-muted">Inspection Reports</span>
+                            <a class="nav-item nav-link" href="./defectDistribution.html">單位瑕疵分佈</a>
+                            &ensp;&emsp;<span class="text-muted">Defects Distribution By Flat</span>
+                            <br><br>
+                            <a class="nav-item nav-link logout" href="/logout">[ 登出 ]</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- pie chart area -->
+    <div id="flat-type-report-zone1">
+        <div class="devReport-container2-1"></div>
+        <div id="piechart">
+    </div>
+
+
+
+    <!-- <canvas id="myChart" width="400" height="400"></canvas> -->
+    
+    <div id="flat-type-report-zone2">
+        <div class="devReport-container2-2"></div>
+        <br><br>
+        <div id="barchart_material"></div>
+    </div>
+
+
+ 
+
+
+
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <!-- Latest compiled and minified Popper: Use for pop up bubble -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <!-- Latest compiled and minified Bootstrap JavaScript -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
+        integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+        crossorigin="anonymous"></script>
+        <!-- <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script> -->
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+        <script src="js/defectsByFlatTypeReport.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,79 @@
+html, body {
+    min-width: fit-content;
+    min-height: fit-content;
+    overflow: hidden;
+} 
+
+.bg-img{
+    min-width: 100%;
+    min-height: 100%;
+    background: url(./images/banner_photo_blurred.png) no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.login-wrapper{
+    height: 70vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#login{
+    align-self: center;
+}
+
+.card-title{
+    padding: 6px;
+}
+
+.card-body{
+    opacity: 0.95 !important;
+    border: 2px ;
+    line-height: 2.5rem;
+    font-size: larger;
+    background-color: seashell;
+}
+
+#login .card-body{
+    box-shadow: 3px 4px 4px;
+    
+}
+
+.login-title{
+    font-size: 80px;
+    font: large;
+    font-weight: medium;
+    text-shadow: 1px 1px rgba(1, 1, 1, 0.76);
+    font-family: 'NotoSansTC-Thin';
+    text-align: center;
+    width: 100vw !important;
+    color: #ffffff;
+}
+
+.login-subtitle{
+    font-size: 26px;
+    font: medium;
+    font-weight: medium;
+    text-shadow: 1px 1px rgba(1, 1, 1, 0.76);
+    font-family: 'NotoSansTC-Thin';
+    font-style: italic;
+    text-align: center;
+    width: 100vw !important;
+    color: #f0f0f0;
+}
+
+#login-button{
+    text-align: center;
+    font: #ffffff;
+}
+
+    #login-button>input:hover{
+        border-color: #C30C0F;
+        box-shadow: 1px 1.5px 2px #C30C0F;
+        color: #C30C0F !important;
+        background-color: #ffffff;
+    }

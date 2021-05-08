@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta charset="utf-8" />
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+        integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous" />
+    <link rel="stylesheet" href="records-inspected.css" />
+</head>
+
+<body>
+
+    <!-- Start of Form -->
+    <!-- <form action="/inspector/records" method="GET" enctype="multipart/form-data"> -->
+
+        <div id="header-top-zone">
+            <div class="container-fluid">
+                <div class="row">
+                    <div id="top-left-zone" class="col-3 top-left-zone">
+                        <div id="click-back">
+                            <!-- <i class="far fa-caret-square-left fa-3x"></i> -->
+                            <div class="btn btn-outline-dark"><i class="fas fa-angle-left"></i>&ensp;上頁</div>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <h2 class="header-top-title">驗樓紀錄</h2>
+                    </div>
+                    <div id="top-right-zone" class="col-3">
+                        <input id="record-update" type='submit' class="btn btn-outline-dark" value="&nbsp;更新&nbsp;"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="header-image-zone">
+            <div id="defect-image-container">
+                <img id="defect-image" src="" class="img-fluid">
+            </div>
+        </div>
+        <i id="defect-image-enlarge-button" class="fas fa-expand fa-2x" data-toggle="modal" data-target="#staticBackdrop"></i>
+
+        <div id="defect-image-upload-button">
+            <label for="defect-photo">
+                <i class="fas fa-camera fa-2x"></i>
+            </label>
+        
+            <input type="file" name="image" id="defect-photo" alt="upload image" accept="image/*" capture>
+        </div>
+
+        <div id="header-banner-zone">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12">
+                        <div>
+                            <h5 id="date-of-inspection">檢驗日期:&emsp;</h5>
+                            <h5 id="time-of-inspection">檢驗時間:&emsp;</h5>
+                            <h5 id="inspector-name">驗樓師:&emsp;&emsp;</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="record-content-box">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12">
+                        <h5 id="feature-information">&ensp;<i class="far fa-file-alt"></i>&emsp;瑕疵類別:&emsp;</h5>
+                        <!-- Feature added here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="record-content-box">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12">
+                        <h5 id="defect-information">&ensp;<i class="far fa-calendar-check"></i>&emsp;瑕疵狀況:&emsp;</h5>
+                        <!-- Defect added here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid">
+            <div class="row">
+                    <br><textarea id="defect-description" name="description" class="col-12" 
+                        placeholder="請輸入圖片描述" rows="4"></textarea>
+            </div>
+        </div>
+
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12 delete-button-box">
+                    <input id="record-delete" type='submit' class="btn-lg btn-danger" value="刪除紀錄"/><br><br>
+                    
+                </div>
+            </div>
+        </div>
+
+    <!-- </form> -->
+
+
+
+    <!-- Modal for enlarged photo-->
+    <div class="modal fade" id="staticBackdrop" data-backdrop="static" tabindex="-1" role="dialog"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div id="modal-wrapper" class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <button id="modal-close-button" type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <i class="fas fa-times"></i>
+                    </button>
+                    <img id="modal-defect-image" src="">
+                </div>
+            </div>
+    </div>
+
+    
+    <!------ Scripts Below ------>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
+        integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+        crossorigin="anonymous"></script>
+    <script src="./js/records-inspected.js" type='text/javascript'></script>
+</body>
+
+</html>
+
+
+
+<!-- Button trigger modal -->
+    <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#staticBackdrop">
+        Launch static backdrop modal
+    </button> -->
+
+    
+<!-- <div class="modal fade" id="staticBackdrop" data-backdrop="static" tabindex="-1" role="dialog"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                ...
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Understood</button>
+            </div>
+        </div>
+    </div>
+</div> -->

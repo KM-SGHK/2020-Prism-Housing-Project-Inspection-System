@@ -1,0 +1,163 @@
+#header-top-zone {
+    background: #F8D807;
+    box-sizing: border-box;
+    position: sticky; 
+    top:0;
+    z-index: 200;
+}
+
+    .header-top-title {
+        text-align: center;
+        padding-top: 2%;
+        padding-bottom: 2%;
+        font-size: 1.9rem;
+        font-weight: 900;
+        margin-top: 8px;
+    }
+
+    #click-back {
+        padding: 4% 0% 4% 0%;
+    }
+
+
+/* ----  below newly added by a perfectionist  ---- */
+
+    #header-top-zone #top-left-zone{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    #header-top-zone #top-right-zone{
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    .btn-outline-dark{
+        border: 2px solid;
+        font-weight: 600; 
+    }
+
+
+html, body {
+    min-width: fit-content;
+    min-height: fit-content;
+}  
+
+#header-banner-zone {
+    padding: 3% 4% 3% 4% 
+}
+
+#defect-image-container {
+    max-height: 28vh;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    object-fit: cover;
+}
+
+    #defect-image{
+        height: 28vh;
+    }
+
+    #defect-image-enlarge-button {
+        position: relative;
+        color: white;
+        top: -8vh;
+        right: 4vh;
+        float: right;
+        cursor: pointer;
+    }
+
+    #defect-image-upload-button {
+        position: relative;
+        color: white;
+        top: -8vh;
+        left: 4vh;
+        float: left;
+    }
+        #defect-image-upload-button>label {
+            margin-bottom: 0;
+            cursor: pointer;
+        }
+        #defect-image-upload-button>input {
+            display: none;
+        }
+
+.record-content-box{
+    height: 10vh;
+    width: 100%;
+    padding-top: 8px;
+    background-color: #F8D807;
+    border: 1px solid #000044;
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+}
+
+.delete-button-box {
+    text-align: center;
+    margin-top: 4vh;
+}
+
+    .delete-button-box>input {
+        width: 32vw;
+        border: #000044 2px;
+    }
+
+#staticBackdrop {
+    min-width: 100%;
+    min-height: 100%;
+    background-color: black;
+}
+
+
+/* CSS below for enlarged image in modal */
+
+#modal-wrapper{
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    height: 100vh;
+    overflow: auto;
+    display: flex;
+    align-items: center;
+}
+
+.modal-content{
+    background-color: black;
+    border: none !important;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ 
+}
+
+#modal-defect-image{
+    object-fit: cover;
+    max-width: 100vw;
+    max-height: auto;
+}
+
+#modal-close-button{
+    height: 36px; 
+    width: 36px;
+    background-color: #ffffff;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    justify-content: center;
+    align-items: center;
+}
+
+    #modal-close-button.close{
+        opacity: 0.7;
+        box-shadow: 1px 1px 1px #000000;
+        border-radius: 20px;
+    }
